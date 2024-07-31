@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Names and Media</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            text-align: center;}
+        .names p {
+            opacity: 0.2;
+            transition: opacity 0.5s;
+            cursor: pointer;
+            font-size:x-large;
+        }
+        .names p.active {
+            opacity: 1;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="names" id="names1">
+        <p onclick="toggleOpacity(this)">انطونيوس</p>
+        <p onclick="toggleOpacity(this)">ابرام</p>
+        <p onclick="toggleOpacity(this)">مارينا</p>
+        <button onclick="showMedia(1)">شلبي</button>
+        <img id="gif1" src=https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDY4MGVlYTN1eGFzNngwb3A5b3AxMzEzYnBvbnF2dGp4dno2d2JuayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/CgKwWgqfF88hMGOaPg/giphy.gif class="hidden" alt="GIF 1">
+    <audio id="audio1" src=C:\Users\DELL\Desktop\html4\audioo.mp3 class="hidden"></audio>
+    </div>
+    <div class="names" id="names2">
+        <p onclick="toggleOpacity(this)">انجلينا</p>
+        <p onclick="toggleOpacity(this)">بارثينيا</p>
+        <p onclick="toggleOpacity(this)">مريم</p>
+        <button onclick="showMedia(2)">مارد وشوشني</button>
+        <img id="gif2" src=https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGR6OXk5ejBzdm44NGs3djRwMWN4dHhiZDl4aHUyM2drYjdpMmt4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t96auri9ZZn61GKiVx/giphy.gif class="hidden" alt="GIF 2">
+    <audio id="audio2" src=C:\Users\DELL\Desktop\html4\audioo.mp3 class="hidden"></audio>
+    </div>
+    <div class="names" id="names3">
+        <p onclick="toggleOpacity(this)">كاراس</p>
+        <p onclick="toggleOpacity(this)">يوسف</p>
+        <p onclick="toggleOpacity(this)">دانيال</p>
+        <button onclick="showMedia(3)">بوو</button>
+        <img id="gif3" src=https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNwcTVwdGt5aG1uNDZucW03aHJlam1oOGRrajJucDhiZ2h1NzI0YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/N9dGBnvFqxeW4/giphy.gif class="hidden" alt="GIF 3">
+    <audio id="audio3" src=C:\Users\DELL\Desktop\html4\audioo.mp3 class="hidden"></audio>
+    </div>
+    <div class="names" id="names4">
+        <p onclick="toggleOpacity(this)">كريانا</p>
+        <p onclick="toggleOpacity(this)">انيوتا</p>
+        <p onclick="toggleOpacity(this)">ماريز</p>
+        <button onclick="showMedia(4)">سالي</button>
+        <img id="gif4" src=https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMW5sd3l6bjM2ZzNocjRmYjMxaW84MWk2d2hqOGIydWNhMm9kbGx1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3otPoncilKPiAZbkju/giphy.gif class="hidden" alt="GIF 4">
+    <audio id="audio4" src=C:\Users\DELL\Desktop\html4\audioo.mp3 class="hidden"></audio>
+    </div>
+    <div class="names" id="names5">
+        <p onclick="toggleOpacity(this)">دانيال</p>
+        <p onclick="toggleOpacity(this)">ظريف</p>
+        <p onclick="toggleOpacity(this)">مينا</p>
+        <button onclick="showMedia(5)">روز</button>
+        <img id="gif5" src=https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2Y4bjViZ2R2cDdzZnhqd25xM28ybncxd2dqeGF5a3BlYnMzd2V5MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D71E9uMpHp292/giphy.gif class="hidden" alt="GIF 5">
+    <audio id="audio5" src=C:\Users\DELL\Desktop\html4\audioo.mp3 class="hidden"></audio>
+    </div>
+    <div class="names" id="names6">
+        <p onclick="toggleOpacity(this)">كيريا</p>
+        <p onclick="toggleOpacity(this)">اناسيمون</p>
+        <p onclick="toggleOpacity(this)">مارتينا</p>
+        <button onclick="showMedia(6)">منفي</button>
+        <img id="gif6" src=https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXdqbWR5aWxkbXltejVzdm9xZDh0dGFtYzl0dmlyY3VtZzZmdWIxaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pI6LmbUhljva0/giphy.gif class="hidden" alt="GIF 6">
+    <audio id="audio6" src=C:\Users\DELL\Desktop\html4\audioo.mp3 class="hidden"></audio>
+    </div>
+    <script>
+        function toggleOpacity(element) {
+            if (element.classList.contains('active')) {
+                element.classList.remove('active');
+            } else {
+                element.classList.add('active');
+            }
+        }
+
+        function showMedia(buttonNumber) {
+            const gif = document.getElementById('gif' + buttonNumber);
+            const audio = document.getElementById('audio' + buttonNumber);
+
+            // Show GIF and play audio
+            gif.classList.remove('hidden');
+            audio.classList.remove('hidden');
+            audio.play();
+
+            // Show all names with full opacity in the corresponding div
+            const namesDiv = document.getElementById('names' + buttonNumber);
+            const names = namesDiv.getElementsByTagName('p');
+            for (let name of names) {
+                name.classList.add('active');
+            }
+
+            // Hide GIF and stop audio after 5 seconds
+            setTimeout(() => {
+                gif.classList.add('hidden');
+                audio.pause();
+                audio.currentTime = 0;
+                for (let name of names) {
+                    name.classList.remove('active');
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
